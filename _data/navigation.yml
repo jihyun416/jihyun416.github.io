@@ -1,0 +1,12 @@
+- type: dates
+  title: Dates
+  url: /dates/
+- type: categories
+  title: Categories
+  url: /categories/
+- type: tags
+  title: Tags
+  url: /tags/
+- type: page
+  title: About
+  url: /about/

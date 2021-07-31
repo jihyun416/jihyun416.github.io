@@ -1,0 +1,54 @@
+# Setup
+title: 제시 노트
+description: 안되네 왜지? 되네 왜지?
+url: https://jihyun416.github.io
+avatar: /paka.jpg
+paginate: 5
+permalink: pretty
+cover_image: /background.jpg
+
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - scripts/
+  - not-pure-poole.gemspec
+
+# Optimize Jekyl SEO Tag
+social:
+  name: Jihyun Song
+  links:
+    - https://github.com/jihyun416
+google_site_verification: xxxxx
+lang: en
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Options
+
+# Replace this value and uncomment to enable Google Analytics tracking
+# google_analytics: UA-000000-0
+
+# Replace this value and uncomment to enable Disqus
+# disqus: xxxxxx
+
+# Specify the author for blog posts
+author:
+  name: Jihyun Song
+  url: https://github.com/jihyun416/
+  email: songsjhsjh@gmail.com
