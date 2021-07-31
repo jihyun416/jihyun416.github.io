@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  [Springboot] RestControllerAdvice로 Exception 처리하기
+title:  Springboot - RestControllerAdvice로 Exception 처리하기
 author: Jihyun
 category: springboot
 tags:
