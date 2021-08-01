@@ -204,15 +204,16 @@ public class ExceptionTestController {
 
 #### 1) @EnableWebMvc 선언
 
-```
+```java
+@Slf4j
 @EnableWebMvc
-@Configuration
-public class WebMvcConfig implements WebMvcConfigurer {
+@RestControllerAdvice
+public class ExceptionAdvice {
+  ...
 }
 ```
 
 - 완전한 제어를 위해 EnableWebMvc 추가
-- WebMvcConfigurer와 같이 있을 필요는 없지만 추후 Swagger 설정 시 Mvc 관련 설정을 추가 할 것이기 때문에 이곳에 같이 설정해둠
 
 
 
