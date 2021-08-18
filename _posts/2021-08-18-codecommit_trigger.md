@@ -2,7 +2,7 @@
 layout: post
 title:  AWS - Codecommit Push Slack 연동
 author: Jihyun
-category: was
+category: aws
 tags:
 - aws
 - codecommit
