@@ -1,15 +1,16 @@
 ---
 layout: post
-title:  AWS - CodeBuild 로 빌드하기
+title:  AWS - CodeBuild Status Slack 전송하기
 author: Jihyun
 category: aws
 tags:
 - aws
 - codebuild
-date: 2021-10-21 23:15 +0900
+date: 2021-08-19 23:15 +0900
+last_modified_at: 2021-08-20 14:36 +0900
 ---
 
-> AWS CodeBuild는 소스 코드를 컴파일하고 테스트를 실행하며 배포 준비가 완료된 소프트웨어 패키지를 생성하는 완전 관리형 지속 통합 서비스입니다. CodeBuild를 사용하면 자체 빌드 서버를 프로비저닝, 관리 및 조정할 필요가 없습니다. CodeBuild는 지속적으로 조정되며 여러 빌드를 동시에 처리하기 때문에 빌드가 대기열에서 대기하지 않고 바로 처리됩니다.
+> CloudWatch와 LambdaAWS CodeBuild는 소스 코드를 컴파일하고 테스트를 실행하며 배포 준비가 완료된 소프트웨어 패키지를 생성하는 완전 관리형 지속 통합 서비스입니다. CodeBuild를 사용하면 자체 빌드 서버를 프로비저닝, 관리 및 조정할 필요가 없습니다. CodeBuild는 지속적으로 조정되며 여러 빌드를 동시에 처리하기 때문에 빌드가 대기열에서 대기하지 않고 바로 처리됩니다.
 
 
 
@@ -96,6 +97,7 @@ cache:
 ![](https://jihyun416.github.io/assets/aws_2_2.png)
 
 - 소스를 가져올 공급자/리포지토리/브랜치를 지정한다.
+- **CodePipeline을 통해 Codebuild 프로젝트를 생성할 경우, 소스를 이전 단계에서 지정하기 때문에 이 부분이 없다.**
 
 ![](https://jihyun416.github.io/assets/aws_2_3.png)
 
@@ -109,7 +111,8 @@ cache:
 ![](https://jihyun416.github.io/assets/aws_2_5.png)
 
 - 추가 구성에서 buildspec.yml 에서 받아서 쓸 환경변수를 지정한다.
-- 이 codebuild project로 빌드한 결과물은 dev로 active 하기 위해 PROFILE=dev 라는 환경변수를 넣었다. *(이름 상관없음. 추후 Deploy를 위해 한 방법일뿐 필수 아님)*
+  - 이 codebuild project로 빌드한 결과물은 dev로 active 하기 위해 PROFILE=dev 라는 환경변수를 넣었다. *(이름 상관없음. 추후 Deploy를 위해 한 방법일뿐 필수 아님)*
+  - **CodePipeline을 이용하여 Codebuild를 실행할 경우 CodePipeline에서도 환경변수 지정이 가능하다.**
 
 ![](https://jihyun416.github.io/assets/aws_2_6.png)
 
