@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  AWS - CodeBuild Status Slack 전송하기
+title:  AWS - CodeBuild를 이용하여 Springboot 프로젝트 빌드하기
 author: Jihyun
 category: aws
 tags:
