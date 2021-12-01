@@ -2,7 +2,7 @@
 layout: post
 title:  AWS - Lambda, RDS Proxy, Secrets Manager
 author: Jihyun
-category: AWS
+category: aws
 tags:
 - aws
 - lambda
@@ -153,8 +153,6 @@ RDS Proxy는 무조건 Secrets Manager를 이용하여 인증해야 한다. 이�
   - AWSLambdaRDSProxyExecutionRole- : RDSProxy에 접근하기 위한 Role, 람다 구성에서 데이터베이스 프록시를 추가하면 자동 생성된다.
   - AWSLambdaVPCAccessExecutionRole- : VPC에 접근하기 위한 Role, 람다 구성에서 VPC 등록 시 자동 생성된다.
 
-![](https://jihyun416.github.io/assets/aws_7_20.png)
-
 ```json
 {
     "Version": "2012-10-17",
@@ -169,12 +167,7 @@ RDS Proxy는 무조건 Secrets Manager를 이용하여 인증해야 한다. 이�
 }
 ```
 
-- lambda에서 RDSProxy에 접근할 때 유저/패스워드가 아닌 IAM을 이용하기로 했기 때문에 IAM이 DB에 connect할 수 있도로 정책 추가가 필요하다.
-- 위와 같은 내용으로 이름을 정해서 위와 같이 정책(policy)를 생성한다.
-
-![](https://jihyun416.github.io/assets/aws_7_21.png)
-
-- 람다의 IAM에 위에서 생성한 정책을 연결한다.
+- AWSLambdaRDSProxyExecutionRole- 의 정책을 위와 같이 변경한다. (user 부분 * 처리)
 
 
 

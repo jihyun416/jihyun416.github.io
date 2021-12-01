@@ -2,7 +2,7 @@
 layout: post
 title:  AWS - Client VPN
 author: Jihyun
-category: AWS
+category: aws
 tags:
 - aws
 - aws client vpn endpoint
