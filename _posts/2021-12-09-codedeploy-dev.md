@@ -112,7 +112,7 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /소스를설치할경로
+    destination: /소스경로
     overwrite: yes
 hooks:
   BeforeInstall:
@@ -127,15 +127,15 @@ hooks:
 
 - 배포 구성 파일이다.
 
-- Source Artifact로 받은 소스를 **/소스를설치할경로**에 설치한다.
+- Source Artifact로 받은 소스를 **/소스경로**에 설치한다.
 
 - BeforeInstall은 설치 이전 시 실행되는 단계이다.
 
   #### 2) beforeInstall.sh
 
   ```shell
-  rm -rf /home/ec2-user/소스를설치할경로
-  mkdir /home/ec2-user/소스를설치할경로
+  rm -rf /소스경로
+  mkdir /소스경로
   ```
 
   - 기존 소스 폴더를 삭제 후 폴더를 다시 생성한다. (기존 소스 삭제 역할)
@@ -160,8 +160,8 @@ hooks:
     docker rmi -f $(docker images -a -q)
   fi
   
-  cd /home/ec2-user/소스를설치할경로
-  aws s3 cp s3://환경변수파일 /home/ec2-user/소스를설치할경로
+  cd /소스경로
+  aws s3 cp s3://환경변수파일 /소스경로
   mv 환경변수파일 .env
   docker-compose -f deployments/docker-compose.dev.yaml up -d --build
   ```
