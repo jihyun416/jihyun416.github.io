@@ -134,8 +134,8 @@ hooks:
   #### 2) beforeInstall.sh
 
   ```shell
-  rm -rf /home/ec2-user/bio-backend
-  mkdir /home/ec2-user/bio-backend
+  rm -rf /home/ec2-user/소스를설치할경로
+  mkdir /home/ec2-user/소스를설치할경로
   ```
 
   - 기존 소스 폴더를 삭제 후 폴더를 다시 생성한다. (기존 소스 삭제 역할)
@@ -160,9 +160,9 @@ hooks:
     docker rmi -f $(docker images -a -q)
   fi
   
-  cd /home/ec2-user/bio-backend
-  aws s3 cp s3://application-env/bio-dev.env /home/ec2-user/bio-backend
-  mv bio-dev.env .env
+  cd /home/ec2-user/소스를설치할경로
+  aws s3 cp s3://환경변수파일 /home/ec2-user/소스를설치할경로
+  mv 환경변수파일 .env
   docker-compose -f deployments/docker-compose.dev.yaml up -d --build
   ```
 
