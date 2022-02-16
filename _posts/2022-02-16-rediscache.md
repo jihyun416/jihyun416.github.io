@@ -1,4 +1,4 @@
-```yaml
+---
 layout: post
 title:  Springboot - redis cache
 author: Jihyun
@@ -9,7 +9,7 @@ tags:
 - elasticache
 - cache
 date: 2022-02-16 19:00 +0900
-```
+---
 
 Redis를 이용하여 자주 호출하는 API에 대해 캐싱을 해볼 것이다.
 
@@ -25,7 +25,7 @@ dependencies {
 
 
 
-## ## 2. application.yml redis 정보 추가
+## 2. application.yml redis 정보 추가
 
 ```yaml
 spring:
