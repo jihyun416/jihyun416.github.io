@@ -142,7 +142,7 @@ public Favorite getFavorite(@RequestParam("userSeq") Long userSeq) {
 
 #### 2) 캐시 삭제
 
-```json
+```java
 @CacheEvict(key = "#userSeq", value = "favorite")
 @PutMapping("/favorite/update")
 public Favorite updateFavorite(@RequestParam("userSeq") Long userSeq, FavoriteDTO dto) {
